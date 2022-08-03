@@ -31,9 +31,36 @@ final class TranslateViewController: UIViewController {
         return button
     }()
     
+    private lazy var buttonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fillEqually
+        stackView.spacing = 8.0
+        
+        [sourceLanguageButton, targetLanguageButton]
+            .forEach{ stackView.addArrangedSubview($0) }
+        
+        return stackView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .secondarySystemBackground
+        
+        setupViews()
+    }
+}
+
+private extension TranslateViewController {
+    func setupViews() {
+        [buttonStackView]
+            .forEach{ view.addSubview($0) }
+        
+        buttonStackView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.equalToSuperview().inset(16.0)
+            $0.trailing.equalToSuperview().inset(16.0)
+            $0.height.equalTo(50.0)
+        }
     }
 }
