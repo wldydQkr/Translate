@@ -8,25 +8,49 @@
 import UIKit
 import SnapKit
 
+enum Language: CaseIterable {
+    case ko
+    case en
+    case ja
+    case ch
+    
+    var title: String {
+        switch self {
+        case .ko: return "한국어"
+        case .en: return "영어"
+        case .ja: return "일본어"
+        case .ch: return "중국어"
+        }
+    }
+}
+
 final class TranslateViewController: UIViewController {
+    
+    private var sourceLanguage: Language = .ko
+    private var targetLanguage: Language = .en
+    
     private lazy var sourceLanguageButton: UIButton = {
         let button = UIButton()
-        button.setTitle("한국어", for: .normal)
+        button.setTitle(sourceLanguage.title, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .semibold)
         button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 9.0
+        
+        button.addTarget(self, action: #selector(didTapLanguageButton), for: .touchUpInside)
         
         return button
     }()
     
     private lazy var targetLanguageButton: UIButton = {
         let button = UIButton()
-        button.setTitle("영어", for: .normal)
+        button.setTitle(targetLanguage.title, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .semibold)
         button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 9.0
+        
+        button.addTarget(self, action: #selector(didTapLanguageButton), for: .touchUpInside)
         
         return button
     }()
@@ -72,6 +96,21 @@ final class TranslateViewController: UIViewController {
         
         return button
     }()
+    
+    @objc func didTapLanguageButton() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+//        let action1 = UIAlertAction(title: <#T##String?#>, style: <#T##UIAlertAction.Style#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+        
+        Language.allCases.forEach { language in
+            let action = UIAlertAction(title: language.title, style: .default, handler: nil)
+            alertController.addAction(action)
+        }
+        
+        let cancelAction = UIAlertAction(title: "취소하기", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
+    }
     
     private lazy var sourceLabelBaseButton: UIView = {
         let view = UIView()
