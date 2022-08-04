@@ -139,10 +139,18 @@
 			isa = PBXGroup;
 			children = (
 				C0386F8D289A455D0080B2ED /* TabBarController.swift */,
+				C0386FC7289BB07E0080B2ED /* Translate */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C0386FC7289BB07E0080B2ED /* Translate */ = {
+			isa = PBXGroup;
+			children = (
 				C0386FC1289A48710080B2ED /* TranslateViewController.swift */,
 				C0386FC5289A979B0080B2ED /* SourceTextViewController.swift */,
 			);
-			path = Scenes;
+			path = Translate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
