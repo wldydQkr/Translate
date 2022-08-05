@@ -20,6 +20,7 @@
 		C0386FC2289A48710080B2ED /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FC1289A48710080B2ED /* TranslateViewController.swift */; };
 		C0386FC4289A56C10080B2ED /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FC3289A56C10080B2ED /* UIColor+.swift */; };
 		C0386FC6289A979B0080B2ED /* SourceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FC5289A979B0080B2ED /* SourceTextViewController.swift */; };
+		C0386FC9289D33FC0080B2ED /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FC8289D33FC0080B2ED /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C0386FC1289A48710080B2ED /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		C0386FC3289A56C10080B2ED /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		C0386FC5289A979B0080B2ED /* SourceTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTextViewController.swift; sourceTree = "<group>"; };
+		C0386FC8289D33FC0080B2ED /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				C0386F94289A455F0080B2ED /* LaunchScreen.storyboard */,
 				C0386F97289A455F0080B2ED /* Info.plist */,
 				C0386FC3289A56C10080B2ED /* UIColor+.swift */,
+				C0386FC8289D33FC0080B2ED /* Language.swift */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				C0386F8E289A455D0080B2ED /* TabBarController.swift in Sources */,
 				C0386FC2289A48710080B2ED /* TranslateViewController.swift in Sources */,
 				C0386FC6289A979B0080B2ED /* SourceTextViewController.swift in Sources */,
+				C0386FC9289D33FC0080B2ED /* Language.swift in Sources */,
 				C0386F8A289A455D0080B2ED /* AppDelegate.swift in Sources */,
 				C0386F8C289A455D0080B2ED /* SceneDelegate.swift in Sources */,
 				C0386FC4289A56C10080B2ED /* UIColor+.swift in Sources */,
