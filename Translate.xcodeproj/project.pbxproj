@@ -23,6 +23,8 @@
 		C0386FC9289D33FC0080B2ED /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FC8289D33FC0080B2ED /* Language.swift */; };
 		C0386FCB28A27A270080B2ED /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FCA28A27A270080B2ED /* Bookmark.swift */; };
 		C0386FCD28A27BFA0080B2ED /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FCC28A27BFA0080B2ED /* UserDefaults+.swift */; };
+		C038700C28A28B220080B2ED /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038700B28A28B220080B2ED /* BookmarkListViewController.swift */; };
+		C038700E28A28F060080B2ED /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		C0386FC8289D33FC0080B2ED /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		C0386FCA28A27A270080B2ED /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		C0386FCC28A27BFA0080B2ED /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		C038700B28A28B220080B2ED /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
+		C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				C0386F8D289A455D0080B2ED /* TabBarController.swift */,
+				C038700B28A28B220080B2ED /* BookmarkListViewController.swift */,
+				C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */,
 				C0386FC7289BB07E0080B2ED /* Translate */,
 			);
 			path = Scenes;
@@ -316,7 +322,9 @@
 				C0386F8A289A455D0080B2ED /* AppDelegate.swift in Sources */,
 				C0386F8C289A455D0080B2ED /* SceneDelegate.swift in Sources */,
 				C0386FC4289A56C10080B2ED /* UIColor+.swift in Sources */,
+				C038700C28A28B220080B2ED /* BookmarkListViewController.swift in Sources */,
 				C0386FCB28A27A270080B2ED /* Bookmark.swift in Sources */,
+				C038700E28A28F060080B2ED /* BookmarkCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
