@@ -41,9 +41,14 @@ final class BookmarkListViewController: UIViewController {
         super.viewWillAppear(animated)
         
         bookmark = UserDefaults.standard.bookmarks
+        collectionView.reloadData()
     }
 }
 extension BookmarkListViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        bookmark.count
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookmarkCollectionViewCell.identifier, for: indexPath) as? BookmarkCollectionViewCell
@@ -52,10 +57,6 @@ extension BookmarkListViewController: UICollectionViewDataSource {
         cell?.setup(from: bookmark)
         
         return cell ?? UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        bookmark.count
     }
 }
 
