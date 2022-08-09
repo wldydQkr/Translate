@@ -25,6 +25,8 @@
 		C0386FCD28A27BFA0080B2ED /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0386FCC28A27BFA0080B2ED /* UserDefaults+.swift */; };
 		C038700C28A28B220080B2ED /* BookmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038700B28A28B220080B2ED /* BookmarkListViewController.swift */; };
 		C038700E28A28F060080B2ED /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */; };
+		C038701028A2AC100080B2ED /* BookmarkTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038700F28A2AC100080B2ED /* BookmarkTextStackView.swift */; };
+		C038701228A2ADA10080B2ED /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038701128A2ADA10080B2ED /* Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		C0386FCC28A27BFA0080B2ED /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		C038700B28A28B220080B2ED /* BookmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListViewController.swift; sourceTree = "<group>"; };
 		C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		C038700F28A2AC100080B2ED /* BookmarkTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTextStackView.swift; sourceTree = "<group>"; };
+		C038701128A2ADA10080B2ED /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,13 +123,12 @@
 			children = (
 				C0386F89289A455D0080B2ED /* AppDelegate.swift */,
 				C0386F8B289A455D0080B2ED /* SceneDelegate.swift */,
+				C038701428A2AEE20080B2ED /* Models */,
 				C0386FCE28A27C050080B2ED /* Extension */,
 				C0386FC0289A485E0080B2ED /* Scenes */,
 				C0386F92289A455F0080B2ED /* Assets.xcassets */,
 				C0386F94289A455F0080B2ED /* LaunchScreen.storyboard */,
 				C0386F97289A455F0080B2ED /* Info.plist */,
-				C0386FC8289D33FC0080B2ED /* Language.swift */,
-				C0386FCA28A27A270080B2ED /* Bookmark.swift */,
 			);
 			path = Translate;
 			sourceTree = "<group>";
@@ -151,8 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C0386F8D289A455D0080B2ED /* TabBarController.swift */,
-				C038700B28A28B220080B2ED /* BookmarkListViewController.swift */,
-				C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */,
+				C038701328A2AED80080B2ED /* Bookmark */,
 				C0386FC7289BB07E0080B2ED /* Translate */,
 			);
 			path = Scenes;
@@ -174,6 +176,26 @@
 				C0386FCC28A27BFA0080B2ED /* UserDefaults+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C038701328A2AED80080B2ED /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				C038700B28A28B220080B2ED /* BookmarkListViewController.swift */,
+				C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */,
+				C038700F28A2AC100080B2ED /* BookmarkTextStackView.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		C038701428A2AEE20080B2ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0386FC8289D33FC0080B2ED /* Language.swift */,
+				C0386FCA28A27A270080B2ED /* Bookmark.swift */,
+				C038701128A2ADA10080B2ED /* Type.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,9 +343,11 @@
 				C0386FC9289D33FC0080B2ED /* Language.swift in Sources */,
 				C0386F8A289A455D0080B2ED /* AppDelegate.swift in Sources */,
 				C0386F8C289A455D0080B2ED /* SceneDelegate.swift in Sources */,
+				C038701228A2ADA10080B2ED /* Type.swift in Sources */,
 				C0386FC4289A56C10080B2ED /* UIColor+.swift in Sources */,
 				C038700C28A28B220080B2ED /* BookmarkListViewController.swift in Sources */,
 				C0386FCB28A27A270080B2ED /* Bookmark.swift in Sources */,
+				C038701028A2AC100080B2ED /* BookmarkTextStackView.swift in Sources */,
 				C038700E28A28F060080B2ED /* BookmarkCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

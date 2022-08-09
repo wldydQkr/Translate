@@ -48,7 +48,8 @@ extension BookmarkListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookmarkCollectionViewCell.identifier, for: indexPath) as? BookmarkCollectionViewCell
         
-        cell?.setup()
+        let bookmark = bookmark[indexPath.item]
+        cell?.setup(from: bookmark)
         
         return cell ?? UICollectionViewCell()
     }
