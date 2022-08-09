@@ -75,16 +75,46 @@ final class TranslateViewController: UIViewController {
     private lazy var bookmarkButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "bookmark"), for: .normal)
+        button.addTarget(self, action: #selector(didTapBookmarkButton), for: .touchUpInside)
         
         return button
     }()
     
+    @objc func didTapBookmarkButton() {
+        guard
+            let sourceText = sourceLabel.text,
+            let translatedText = resultLabel.text,
+            bookmarkButton.imageView?.image == UIImage(systemName: "bookmark") // bookmark.fill == 북마크가 된 상태
+        else { return }
+        
+        bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+        
+        let currentBookmarks: [Bookmark] = UserDefaults.standard.bookmarks
+        let newBookmark = Bookmark(
+            sourceLanguage: sourceLanguage,
+            translatedLanguage: targetLanguage,
+            sourceText: sourceText,
+            translatedText: translatedText
+        )
+        
+        UserDefaults.standard.bookmarks = currentBookmarks + [newBookmark]
+        
+        print(UserDefaults.standard.bookmarks)
+        
+                // userDefaults에 저장하는 타이밍
+    }
+    
     private lazy var copyButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "doc.on.doc"), for: .normal)
+        button.addTarget(self, action: #selector(didTapCopyButton), for: .touchUpInside)
         
         return button
     }()
+    
+    @objc func didTapCopyButton() {
+        UIPasteboard.general.string = resultLabel.text
+    }
     
     private lazy var sourceLabelBaseButton: UIView = {
         let view = UIView()
@@ -100,7 +130,6 @@ final class TranslateViewController: UIViewController {
         let label = UILabel()
         label.text = "텍스트를 입력해주세요."
         label.textColor = .tertiaryLabel
-        // TODO: sourceLabel에 입력값이 추가되면, placeholder 해제
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 23.0, weight: .semibold)
         
@@ -123,6 +152,8 @@ extension TranslateViewController: SourceTextViewControllerDelegate {
         
         sourceLabel.text = sourceText
         sourceLabel.textColor = .label
+        
+        bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
     }
     
 }
@@ -205,7 +236,7 @@ private extension TranslateViewController {
     
     func didTapLanguageButton(type: Type) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//        let action1 = UIAlertAction(title: <#T##String?#>, style: <#T##UIAlertAction.Style#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
+        //        let action1 = UIAlertAction(title: <#T##String?#>, style: <#T##UIAlertAction.Style#>, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
         
         Language.allCases.forEach { language in
             let action = UIAlertAction(title: language.title, style: .default) { [weak self] _ in
