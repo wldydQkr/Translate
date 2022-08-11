@@ -27,6 +27,9 @@
 		C038700E28A28F060080B2ED /* BookmarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */; };
 		C038701028A2AC100080B2ED /* BookmarkTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038700F28A2AC100080B2ED /* BookmarkTextStackView.swift */; };
 		C038701228A2ADA10080B2ED /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038701128A2ADA10080B2ED /* Type.swift */; };
+		C0DDC7D428A5102F001AE986 /* TranslateRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DDC7D328A5102F001AE986 /* TranslateRequestModel.swift */; };
+		C0DDC7D628A5106B001AE986 /* TranlateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DDC7D528A5106B001AE986 /* TranlateResponseModel.swift */; };
+		C0DDC7D828A5111E001AE986 /* TranlatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DDC7D728A5111E001AE986 /* TranlatorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		C038700D28A28F060080B2ED /* BookmarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCollectionViewCell.swift; sourceTree = "<group>"; };
 		C038700F28A2AC100080B2ED /* BookmarkTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTextStackView.swift; sourceTree = "<group>"; };
 		C038701128A2ADA10080B2ED /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		C0DDC7D328A5102F001AE986 /* TranslateRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRequestModel.swift; sourceTree = "<group>"; };
+		C0DDC7D528A5106B001AE986 /* TranlateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranlateResponseModel.swift; sourceTree = "<group>"; };
+		C0DDC7D728A5111E001AE986 /* TranlatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranlatorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 			children = (
 				C0386F89289A455D0080B2ED /* AppDelegate.swift */,
 				C0386F8B289A455D0080B2ED /* SceneDelegate.swift */,
+				C0DDC7D928A51122001AE986 /* Manager */,
 				C038701428A2AEE20080B2ED /* Models */,
 				C0386FCE28A27C050080B2ED /* Extension */,
 				C0386FC0289A485E0080B2ED /* Scenes */,
@@ -194,8 +201,18 @@
 				C0386FC8289D33FC0080B2ED /* Language.swift */,
 				C0386FCA28A27A270080B2ED /* Bookmark.swift */,
 				C038701128A2ADA10080B2ED /* Type.swift */,
+				C0DDC7D328A5102F001AE986 /* TranslateRequestModel.swift */,
+				C0DDC7D528A5106B001AE986 /* TranlateResponseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C0DDC7D928A51122001AE986 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C0DDC7D728A5111E001AE986 /* TranlatorManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,8 +355,11 @@
 			files = (
 				C0386F8E289A455D0080B2ED /* TabBarController.swift in Sources */,
 				C0386FCD28A27BFA0080B2ED /* UserDefaults+.swift in Sources */,
+				C0DDC7D428A5102F001AE986 /* TranslateRequestModel.swift in Sources */,
+				C0DDC7D828A5111E001AE986 /* TranlatorManager.swift in Sources */,
 				C0386FC2289A48710080B2ED /* TranslateViewController.swift in Sources */,
 				C0386FC6289A979B0080B2ED /* SourceTextViewController.swift in Sources */,
+				C0DDC7D628A5106B001AE986 /* TranlateResponseModel.swift in Sources */,
 				C0386FC9289D33FC0080B2ED /* Language.swift in Sources */,
 				C0386F8A289A455D0080B2ED /* AppDelegate.swift in Sources */,
 				C0386F8C289A455D0080B2ED /* SceneDelegate.swift in Sources */,
