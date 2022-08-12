@@ -14,7 +14,7 @@ protocol SourceTextViewControllerDelegate: AnyObject {
 
 final class SourceTextViewController: UIViewController {
     
-    private let placeholderText = "텍스트를 입력해주세요."
+    private let placeholderText = NSLocalizedString("Enter_text", comment: "텍스트를 입력해주세요.")
     
     private weak var delegate: SourceTextViewControllerDelegate?
     
